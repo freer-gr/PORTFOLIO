@@ -815,3 +815,52 @@ a.button:hover,
     font-size: 1.2rem;
   }
 }
+
+/* Existing layout for larger screens */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Ensure image sizing */
+.about-image-wrapper img {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+}
+
+
+
+/* Mobile layout fix */
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 1.5rem 1rem;
+  }
+
+  .about-image-wrapper img {
+    width: 140px; /* Smaller image for mobile */
+    border-radius: 16px;
+    margin-top: 1rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+
+  .linkedin-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
